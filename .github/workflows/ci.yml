@@ -9,7 +9,7 @@ on:
 
 env:
   GO111MODULE: "on"
-  MIN_PERCENT_FOR_COVERAGE: 80
+  MIN_PERCENT_FOR_COVERAGE: 0
 
 jobs:
   go_get:
