@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS company_info;
+DROP TABLE IF EXISTS employee_schedules;
+DROP TABLE IF EXISTS employee_gallery;
+DROP TABLE IF EXISTS employees_services;
+DROP TABLE IF EXISTS employee_photos;
+DROP TABLE IF EXISTS roles;
+DROP TABLE IF EXISTS appointments;
+DROP TABLE IF EXISTS services;
+DROP TABLE IF EXISTS schedules;
+DROP TABLE IF EXISTS weekdays;
+DROP TABLE IF EXISTS employees;
