@@ -1,0 +1,106 @@
+@import "smart-grid", "vars", "fonts";
+@include reset();
+
+li {
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 2px 0;
+  }
+}
+
+#employee-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $dashboardBackGround;
+  background: $MenuGradient;
+  box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.70);
+  z-index: 999;
+
+  #employee-navbar-elem {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 12px 25px;
+
+    a {
+      color: #fff;
+      padding: 5px;
+
+      &:hover {
+        color: #d2d2d2;
+      }
+    }
+
+    #employee-notification {
+      position: relative;
+
+      &:before {
+        content: "0";
+        position: absolute;
+        top: -4px;
+        right: -3px;
+        font-size: 13px;
+        background-color: #ff2e7f;
+        padding: 1px 2px;
+        border-radius: 10px;
+        min-width: 13px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#employee-navbar-collapse {
+  margin-top: 45px;
+  @include xmd-block(){
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #employee-sidebar {
+    display: none;
+    position: fixed;
+    left: 0;
+    background: $dashboardSidebarBackGround;
+    background: $dashboardSidebarGradient;
+    width: 100%;
+    padding: 15px 0;
+    height: 100vh;
+    z-index: 9;
+    .has-submenu-icon{
+      float: right;
+    }
+    @include xmd-block(){
+      @include size(2);
+      position: static;
+    }
+    a {
+      font-size: 17px;
+      color: #fff;
+      overflow-wrap: break-word;
+      width: 100%;
+      display: block;
+    }
+
+    .sidebar-item, .submenu-item {
+      padding: 3px 10px;
+    }
+  }
+  .submenu{
+    display: none;
+  }
+  #item {
+    padding: 25px 0;
+    @include xmd-block(){
+      @include size(10);
+      margin: 0 auto;
+    }
+  }
+}
+
+@import "changeuserdata";
+@import "schedule";
+@import "bid";
+@import "createUser";
+@import "allusers";

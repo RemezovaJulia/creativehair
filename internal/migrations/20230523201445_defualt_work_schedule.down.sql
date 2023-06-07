@@ -1,0 +1,1 @@
+DELETE FROM work_schedule WHERE id IN (1);

@@ -1,0 +1,35 @@
+.appointments-wrapper {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+
+  .appointment-card {
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #d2d2d2;
+    border-radius: 5px;
+    margin: 5px;
+
+    p {
+      margin: 2px 0;
+    }
+
+    .btn-appointment {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #2da3d9;
+        border-radius: 4px;
+        color: #4e2840;
+        &:hover {
+          background-color: #2da3d9;
+        }
+      }
+    }
+
+
+  }
+}

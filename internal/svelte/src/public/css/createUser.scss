@@ -1,0 +1,45 @@
+#create-user {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  & label {
+    margin: 4px 0 4px 0;
+
+    & input {
+      min-width: 250px;
+      background: rgba(220, 219, 219, 0.54);
+      outline: none;
+      border: none;
+      border-radius: 9px;
+      padding: 3px;
+    }
+  }
+  #send {
+    margin-top: 5px;
+    padding: 6px 7px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    background: aquamarine;
+
+    &:hover {
+      background: #2beea3;
+    }
+  }
+  select {
+    padding: 5px 2px;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 200px;
+    margin: 6px 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+    .error-msg{
+    box-sizing: border-box;
+    padding: 5px;
+    color: red;
+  }
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Парикмахерская</title>
+<script defer src="public/js/appointments.bundle.3b43885bc1a93d308b6e.js"></script><script defer src="public/js/gallery.bundle.490cf22c627706e9d85d.js"></script><link href="./public/css/appointments.f347eebccbb4fa850a21.css" rel="stylesheet"><link href="./public/css/gallery.f347eebccbb4fa850a21.css" rel="stylesheet"></head>
+<body>
+<nav>
+    <ul id="nav-bar">
+        <li>
+            <ul id="nav-bar-element">
+                <li><a href="/" id="logo">CreativeHair</a></li>
+                {{if .isAuthenticated}}
+                <li><a href="/auth"><span class="icon-user"></span></a></li>
+                {{end}}
+                <li><a href="#" id="collapse-btn">☰</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav-collapse">
+                <li><a href="/">Главная</a></li>
+                <li><a href="#about-us">О нас</a></li>
+                <li><a href="#employees">Наши мастера</a></li>
+
+                <li><a href="#we-here">Мы тут</a></li>
+                <li><a href="#appointments">Запись</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section id="hero">
+        <div id="hero-image">
+            <img src="public/images/hero_women_500x500.png" alt="" width="500" height="500">
+        </div>
+        <div id="hero-info">
+            <h1>Парикмахерская в Надыме creative hair</h1>
+            <a href="#appointments">Записаться</a>
+            <a href="#we-here">Где МЫ?</a>
+        </div>
+    </section>
+    <section id="about-us">
+        <div id="about-us-text">
+            <h2>О нас</h2>
+            <p>
+                Creative Hair - это парикмахерская, где мастера сочетают творчество и инновации для создания
+                уникальных и идеальных причесок для каждого клиента.
+                Наш слоган "Уникальные прически, уникальный стиль" выражает нашу концепцию,
+                что каждый клиент заслуживает свой собственный уникальный стиль,
+                который мы с радостью поможем создать. Обратившись к нам, Вы можете быть уверены в том,
+                что получите незабываемый опыт и идеальную прическу.
+            </p>
+        </div>
+    </section>
+    <section id="employees">
+        <div id="employees-wrapper">
+            <h2>Наши Мастера</h2>
+            <div id="employees-list">
+                {{ range  .employees}}
+                <div class="employee-cart">
+                    <img src="{{.Photo.String}}" alt="">
+                    <p class="employee-name">
+                        {{.Name}}
+                    </p>
+                    <p class="employee-description">
+                      {{.About.String}}
+                    </p>
+                    <a href="user/{{.Id}}" class="employee-more-info">Подробнее</a>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="we-here">
+        <div class="container">
+            <h2>Мы тут</h2>
+            <div class="flex-wrapper">
+                <div class="map-description">
+                    <ul>
+                        <li>Наш адрес: Надым, улица Зверева</li>
+                        <li>Телефон: +7 (912) 123-45-67</li>
+
+                    </ul>
+                </div>
+                <div id="map">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointments">
+        <h2>Записаться</h2>
+    </section>
+    <section id="gallery">
+        <h2>Галерея</h2>
+
+    </section>
+</main>
+<footer>
+    <ul class="contacts">
+        <li>Адрес: г. Надым ул. Зверева</li>
+        <li>Телефон: <a href="tel:+7 (912) 123-45-67">+7(912)123-45-67</a></li>
+    </ul>
+    <ul class="schedule">
+        <li>Мы работаем Пн-Пт</li>
+        <li>c 09:00</li>
+        <li>до 20:00</li>
+    </ul>
+</footer>
+<script>
+    let toggle = false
+    const btn = document.getElementById('collapse-btn')
+    const collapse = document.querySelector('.nav-collapse')
+    document.addEventListener('DOMContentLoaded', function() {
+        const yandexMap = document.getElementById('map');
+
+        const iframe = document.createElement('iframe');
+        iframe.src = "https://yandex.ru/map-widget/v1/?um=constructor%3A7320ec90f1135a9461426582a7770a5d9332952ef8b6e441e274f95a5852fb00&amp;source=constructor";
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.frameBorder = "0";
+
+        yandexMap.appendChild(iframe);
+    });
+    btn.addEventListener('click', ev => {
+        ev.preventDefault()
+        toggle = !toggle
+        collapse.style.display = toggle ? 'block' : 'none'
+        if (!toggle) return
+
+        const collapseHandler = ev => {
+            if (ev.target.tagName !== 'A') return
+            toggle = false
+            collapse.style.display = 'none'
+            collapse.removeEventListener('click', collapseHandler)
+        }
+        collapse.addEventListener('click', collapseHandler)
+    })
+</script>
+</body>
+</html>

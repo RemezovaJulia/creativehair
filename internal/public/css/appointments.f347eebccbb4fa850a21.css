@@ -1,0 +1,1034 @@
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/postcss-loader/dist/cjs.js!./src/public/css/appointments.scss ***!
+  \********************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../public/fonts/roboto-v30-latin-regular.woff2) format("woff2"); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: "fontello";
+  src: url(../../public/fonts/fontello.eot);
+  src: url(../../public/fonts/fontello.eot#iefix) format("embedded-opentype"), url(../../public/fonts/fontello.woff2) format("woff2"), url(../../public/fonts/fontello.woff) format("woff"), url(../../public/fonts/fontello.ttf) format("truetype"), url(../../public/images/fontello.svg?76022724#fontello) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?76022724#fontello') format('svg');
+  }
+}
+*/
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-users:before {
+  content: "\e800";
+} /* '' */
+.icon-comment:before {
+  content: "\e801";
+} /* '' */
+.icon-vk:before {
+  content: "\e802";
+} /* '' */
+.icon-down-circle:before {
+  content: "\e803";
+} /* '' */
+.icon-right-circle:before {
+  content: "\e804";
+} /* '' */
+.icon-user:before {
+  content: "\e805";
+} /* '' */
+.icon-calendar:before {
+  content: "\e806";
+} /* '' */
+.icon-cog:before {
+  content: "\e807";
+} /* '' */
+.icon-picture:before {
+  content: "\e808";
+} /* '' */
+.icon-thumbs-up-alt:before {
+  content: "\f164";
+} /* '' */
+.icon-user-circle-o:before {
+  content: "\f2be";
+} /* '' */
+.icon-telegram:before {
+  content: "\f2c6";
+} /* '' */
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img, abbr {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-family: "Fira Code SemiBold", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+nav {
+  position: fixed;
+  padding: 7px;
+  z-index: 99999;
+  width: 100%;
+  background: -webkit-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  background: -moz-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  background: -o-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  background: linear-gradient(194deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  -webkit-box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 1024px) {
+  nav #nav-bar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+nav a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+nav #nav-bar-element {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+nav #nav-bar-element span.icon-user {
+  font-size: 20px;
+  padding: 5px 2px;
+  background: rgba(76, 76, 76, 0.58);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 25px;
+}
+nav #nav-bar-element a {
+  font-size: 16px;
+  font-weight: bold;
+}
+nav #nav-bar-element #collapse-btn {
+  font-size: 25px !important;
+}
+nav #nav-bar-element #collapse-btn {
+  padding: 10px;
+}
+@media screen and (min-width: 1024px) {
+  nav #nav-bar-element #collapse-btn {
+    display: none;
+  }
+}
+nav .nav-collapse {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  nav .nav-collapse {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2px 16px;
+  }
+}
+nav .nav-collapse li {
+  padding: 5px;
+}
+nav .nav-collapse a {
+  font-size: 16px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav .nav-collapse a:hover {
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 10px #2196f3, 0 0 15px #673ab7, 0 0 10px #9c27b0, 0 0 4px #e91e63, -1px 0px 11px #e91e63, 0px 0px 0px #ce5937;
+}
+
+#hero {
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: rgb(255, 155, 112);
+  background: -webkit-linear-gradient(45deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 28%, rgb(117, 60, 66) 50%, rgb(86, 46, 72) 61%, rgb(63, 30, 51) 78%, rgb(37, 12, 31) 90%, rgb(31, 13, 29) 96%, rgb(24, 10, 25) 100%);
+  background: -moz-linear-gradient(45deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 28%, rgb(117, 60, 66) 50%, rgb(86, 46, 72) 61%, rgb(63, 30, 51) 78%, rgb(37, 12, 31) 90%, rgb(31, 13, 29) 96%, rgb(24, 10, 25) 100%);
+  background: -o-linear-gradient(45deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 28%, rgb(117, 60, 66) 50%, rgb(86, 46, 72) 61%, rgb(63, 30, 51) 78%, rgb(37, 12, 31) 90%, rgb(31, 13, 29) 96%, rgb(24, 10, 25) 100%);
+  background: linear-gradient(45deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 28%, rgb(117, 60, 66) 50%, rgb(86, 46, 72) 61%, rgb(63, 30, 51) 78%, rgb(37, 12, 31) 90%, rgb(31, 13, 29) 96%, rgb(24, 10, 25) 100%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: wrap row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-flow: wrap row;
+  flex-flow: wrap row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (min-width: 780px) {
+  #hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 960px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+#hero #hero-image {
+  position: relative;
+  bottom: -4px;
+  max-width: 300px;
+}
+@media screen and (min-width: 960px) {
+  #hero #hero-image {
+    max-width: 100%;
+  }
+}
+#hero #hero-info {
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#hero #hero-info h1 {
+  font-size: 25px;
+  font-family: "Fira Code SemiBold", sans-serif;
+  text-align: center;
+  padding: 0 5px 25px 5px;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 10px #2196f3, 0 0 15px #673ab7, 0 0 10px #9c27b0, 0 0 4px #e91e63, -1px 0px 11px #e91e63, 0px 0px 0px #ce5937;
+  color: #FFFFFF;
+  max-width: 400px;
+}
+#hero #hero-info a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  width: 150px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 7px 0;
+}
+#hero #hero-info a:hover {
+  -webkit-box-shadow: 0 0 13px 1px rgba(156, 39, 176, 0.5);
+  -moz-box-shadow: 0 0 13px 1px rgba(156, 39, 176, 0.5);
+  box-shadow: 0 0 13px 1px rgba(156, 39, 176, 0.5);
+  background-color: #4e2840;
+  border: 1px solid #4e2840;
+}
+
+#about-us {
+  background: #fff;
+}
+#about-us::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 25px;
+  top: -18px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.03)), color-stop(27%, rgba(255, 255, 255, 0.14)), color-stop(28%, rgba(255, 255, 255, 0.21)), to(rgb(255, 255, 255)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+}
+#about-us #about-us-text {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 780px) {
+  #about-us #about-us-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+#about-us #about-us-text p {
+  text-align: center;
+  font-size: 17px;
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#about-us::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(73%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.1)));
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: -o-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  height: 25px;
+  bottom: -20px;
+}
+
+#employees {
+  background: #9C3C86;
+  background: -webkit-linear-gradient(225deg, #9C3C86, #6199E0);
+  background: -moz-linear-gradient(225deg, #9C3C86, #6199E0);
+  background: -o-linear-gradient(225deg, #9C3C86, #6199E0);
+  background: linear-gradient(225deg, #9C3C86, #6199E0);
+  min-height: 400px;
+}
+#employees #employees-wrapper {
+  padding: 45px;
+}
+#employees #employees-wrapper #employees-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media screen and (min-width: 400px) and (max-width: 560px) {
+  #employees #employees-wrapper #employees-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+#employees #employees-wrapper #employees-list .employee-cart {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin: 10px;
+  width: calc(100% - 20px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 560px) {
+  #employees #employees-wrapper #employees-list .employee-cart {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 780px) {
+  #employees #employees-wrapper #employees-list .employee-cart {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+@media screen and (min-width: 960px) {
+  #employees #employees-wrapper #employees-list .employee-cart {
+    width: calc(25% - 20px);
+  }
+}
+#employees #employees-wrapper #employees-list .employee-cart img {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#employees #employees-wrapper #employees-list .employee-cart .employee-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+#employees #employees-wrapper #employees-list .employee-cart .employee-description {
+  padding: 10px 0;
+}
+#employees #employees-wrapper #employees-list .employee-cart .employee-more-info {
+  margin-top: auto;
+}
+#employees #employees-wrapper #employees-list .employee-cart a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #d2d2d2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#we-here::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 25px;
+  top: -18px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.03)), color-stop(27%, rgba(255, 255, 255, 0.14)), color-stop(28%, rgba(255, 255, 255, 0.21)), to(rgb(255, 255, 255)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+}
+#we-here .container {
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+@media screen and (min-width: 560px) {
+  #we-here .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 560px) and (min-width: 780px) {
+  #we-here .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+#we-here .container .flex-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: wrap row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-flow: wrap row;
+  flex-flow: wrap row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#we-here .container .flex-wrapper .map-description {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 5px;
+  font-size: 17px;
+}
+@media screen and (min-width: 780px) {
+  #we-here .container .flex-wrapper .map-description {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 960px) {
+  #we-here .container .flex-wrapper .map-description {
+    width: calc(25% - 20px);
+  }
+}
+#we-here .container .flex-wrapper #map {
+  margin: 5px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  min-height: 500px;
+}
+@media screen and (min-width: 780px) {
+  #we-here .container .flex-wrapper #map {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 960px) {
+  #we-here .container .flex-wrapper #map {
+    width: calc(75% - 20px);
+  }
+}
+#we-here::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(73%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.1)));
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: -o-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  height: 25px;
+  bottom: -20px;
+}
+
+#appointments {
+  padding: 30px;
+  background: #4ACDDE;
+  background: -webkit-linear-gradient(315deg, #4EFFDF, #48BBDE, #F47EC6);
+  background: -moz-linear-gradient(315deg, #4EFFDF, #48BBDE, #F47EC6);
+  background: -o-linear-gradient(315deg, #4EFFDF, #48BBDE, #F47EC6);
+  background: linear-gradient(135deg, #4EFFDF, #48BBDE, #F47EC6);
+}
+
+#calendar-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 780px) {
+  #calendar-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+#calendar-wrapper table {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-collapse: collapse;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+}
+#calendar-wrapper table .monday {
+  background: rgb(215, 174, 120);
+  background: -webkit-linear-gradient(200deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 52%);
+  background: -moz-linear-gradient(200deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 52%);
+  background: -o-linear-gradient(200deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 52%);
+  background: linear-gradient(250deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 52%);
+}
+#calendar-wrapper table .monday:hover {
+  background: -webkit-linear-gradient(200deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 102%);
+  background: -moz-linear-gradient(200deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 102%);
+  background: -o-linear-gradient(200deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 102%);
+  background: linear-gradient(250deg, rgb(197, 255, 193) 0%, rgb(255, 206, 184) 102%);
+}
+#calendar-wrapper table .tuesday {
+  background: -webkit-linear-gradient(169deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 44%);
+  background: -moz-linear-gradient(169deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 44%);
+  background: -o-linear-gradient(169deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 44%);
+  background: linear-gradient(281deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 44%);
+}
+#calendar-wrapper table .tuesday:hover {
+  background: -webkit-linear-gradient(169deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 102%);
+  background: -moz-linear-gradient(169deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 102%);
+  background: -o-linear-gradient(169deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 102%);
+  background: linear-gradient(281deg, rgb(255, 158, 252) 25%, rgb(162, 253, 207) 102%);
+}
+#calendar-wrapper table .wednesday {
+  background: rgb(126, 120, 215);
+  background: -webkit-linear-gradient(200deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 60%);
+  background: -moz-linear-gradient(200deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 60%);
+  background: -o-linear-gradient(200deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 60%);
+  background: linear-gradient(250deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 60%);
+}
+#calendar-wrapper table .wednesday:hover {
+  background: -webkit-linear-gradient(200deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 102%);
+  background: -moz-linear-gradient(200deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 102%);
+  background: -o-linear-gradient(200deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 102%);
+  background: linear-gradient(250deg, rgb(154, 148, 247) 0%, rgb(136, 253, 255) 102%);
+}
+#calendar-wrapper table .thursday {
+  background: rgb(126, 120, 215);
+  background: -webkit-linear-gradient(200deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 60%);
+  background: -moz-linear-gradient(200deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 60%);
+  background: -o-linear-gradient(200deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 60%);
+  background: linear-gradient(250deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 60%);
+}
+#calendar-wrapper table .thursday:hover {
+  background: -webkit-linear-gradient(200deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 102%);
+  background: -moz-linear-gradient(200deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 102%);
+  background: -o-linear-gradient(200deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 102%);
+  background: linear-gradient(250deg, rgb(144, 136, 253) 0%, rgb(255, 154, 216) 102%);
+}
+#calendar-wrapper table .friday {
+  background: rgb(183, 180, 237);
+  background: -webkit-linear-gradient(200deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 60%);
+  background: -moz-linear-gradient(200deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 60%);
+  background: -o-linear-gradient(200deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 60%);
+  background: linear-gradient(250deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 60%);
+}
+#calendar-wrapper table .friday:hover {
+  background: -webkit-linear-gradient(200deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 102%);
+  background: -moz-linear-gradient(200deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 102%);
+  background: -o-linear-gradient(200deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 102%);
+  background: linear-gradient(250deg, rgb(165, 160, 253) 0%, rgb(251, 173, 199) 102%);
+}
+#calendar-wrapper table .saturday {
+  background: rgb(215, 174, 120);
+  background: -webkit-linear-gradient(200deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 52%);
+  background: -moz-linear-gradient(200deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 52%);
+  background: -o-linear-gradient(200deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 52%);
+  background: linear-gradient(250deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 52%);
+}
+#calendar-wrapper table .saturday:hover {
+  background: -webkit-linear-gradient(200deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 102%);
+  background: -moz-linear-gradient(200deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 102%);
+  background: -o-linear-gradient(200deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 102%);
+  background: linear-gradient(250deg, rgb(255, 197, 197) 0%, rgb(196, 222, 253) 102%);
+}
+#calendar-wrapper table .sunday {
+  background: rgb(215, 174, 120);
+  background: -webkit-linear-gradient(200deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 52%);
+  background: -moz-linear-gradient(200deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 52%);
+  background: -o-linear-gradient(200deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 52%);
+  background: linear-gradient(250deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 52%);
+}
+#calendar-wrapper table .sunday:hover {
+  background: -webkit-linear-gradient(200deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 102%);
+  background: -moz-linear-gradient(200deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 102%);
+  background: -o-linear-gradient(200deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 102%);
+  background: linear-gradient(250deg, rgb(141, 129, 203) 0%, rgb(80, 255, 199) 102%);
+}
+#calendar-wrapper th,
+#calendar-wrapper td {
+  border: 1px solid black;
+  padding: 5px;
+}
+#calendar-wrapper td {
+  cursor: pointer;
+}
+#calendar-wrapper .td-empty {
+  cursor: no-drop !important;
+}
+#calendar-wrapper #work-days {
+  background: rgb(215, 174, 120);
+  background: -webkit-linear-gradient(54deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 52%);
+  background: -moz-linear-gradient(54deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 52%);
+  background: -o-linear-gradient(54deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 52%);
+  background: linear-gradient(36deg, rgb(215, 174, 120) 0%, rgb(192, 127, 97) 52%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: wrap row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-flow: wrap row;
+  flex-flow: wrap row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 780px) {
+  #calendar-wrapper #work-days {
+    width: calc(66.6666666667% - 20px);
+  }
+}
+#calendar-wrapper #work-days li {
+  padding: 10px;
+}
+
+#popup-calendar-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(210, 210, 210, 0.9);
+  z-index: 99999;
+}
+#popup-calendar-wrapper #popup-calendar {
+  background-color: rgba(252, 252, 252, 0.6);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  top: 25px;
+  padding: 20px 0;
+  -webkit-box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.45);
+  min-height: 220px;
+}
+#popup-calendar-wrapper #popup-calendar .before {
+  background-color: #d2d2d2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  height: 100%;
+  z-index: 9999999999999;
+  width: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+@media screen and (min-width: 780px) {
+  #popup-calendar-wrapper #popup-calendar {
+    width: calc(58.3333333333% - 20px);
+    margin: 0 auto;
+  }
+}
+#popup-calendar-wrapper #popup-calendar #close-popup {
+  position: absolute;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: -2px;
+  right: 5px;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 5px;
+}
+#popup-calendar-wrapper #popup-calendar select {
+  padding: 5px 2px;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  min-width: 200px;
+  margin: 6px 0;
+}
+#popup-calendar-wrapper #popup-calendar select:focus {
+  outline: none;
+}
+#popup-calendar-wrapper #popup-calendar #appointments-inputs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+#popup-calendar-wrapper #popup-calendar label {
+  margin: 4px 0;
+}
+#popup-calendar-wrapper #popup-calendar label input {
+  padding: 4px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: rgb(213, 213, 213);
+}
+#popup-calendar-wrapper #popup-calendar #send {
+  margin-top: 5px;
+  padding: 6px 7px;
+  cursor: pointer;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  border: none;
+  background: aquamarine;
+}
+#popup-calendar-wrapper #popup-calendar #send:hover {
+  background: #2beea3;
+}
+#popup-calendar-wrapper #popup-calendar #is-accepted {
+  padding: 20px;
+  font-size: 19px;
+  text-align: center;
+}
+#popup-calendar-wrapper #popup-calendar #error-form-msg {
+  padding: 10px 15px;
+  color: #d93939;
+  text-align: center;
+}
+
+#gallery::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 25px;
+  top: -18px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.03)), color-stop(27%, rgba(255, 255, 255, 0.14)), color-stop(28%, rgba(255, 255, 255, 0.21)), to(rgb(255, 255, 255)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.14) 27%, rgba(255, 255, 255, 0.21) 28%, rgb(255, 255, 255) 100%);
+}
+#gallery::after {
+  content: "";
+  display: block;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(73%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.1)));
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: -o-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 73%, rgba(255, 255, 255, 0.1) 100%);
+  height: 25px;
+  bottom: -20px;
+}
+
+footer {
+  color: #fff;
+  background: -webkit-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  background: -moz-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  background: -o-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  background: linear-gradient(194deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
+  font-size: 17px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+footer a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+@media screen and (min-width: 560px) {
+  footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+footer ul {
+  padding: 5px;
+  margin: 2px;
+}
+
+/*# sourceMappingURL=appointments.f347eebccbb4fa850a21.css.map*/

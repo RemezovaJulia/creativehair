@@ -24,3 +24,6 @@
    `migrate -path ~/your_path_to_the_project/creativehair/internal/migrations -database postgres://user:password@localhost:5432/database_name?sslmode=disable up`
 только не забудьте, то что строка: **postgres://user:password@localhost:5432/database_name?sslmode=disable** должна иметь
 формат URL, то есть такие спец символы как:'^', '!', '#' должны быть хэшированные в формат url: https://snipp.ru/handbk/url-code
+5. Добавить фейковых сотрудников: `make add-fake-user-up`, 
+если нужно удалить фейковых сотрудников, тогда: `make add-fake-user-down`. 
+
