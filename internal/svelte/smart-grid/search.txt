@@ -1,0 +1,1 @@
+`{{var}}val{{=}}100% / {{var}}columns * {{var}}n{{;}}\n`
