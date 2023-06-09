@@ -44,6 +44,12 @@ func FriedUser(c *gin.Context, app *app.App) {
 			"error": "Ошибка сервера",
 		})
 	}
+
+	if err := app.Cache.LoadEmployees(); err != nil {
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{
+			"error": "Ошибка сервера",
+		})
+	}
 	c.JSON(http.StatusOK, gin.H{
 		"message": "Пользователь успешно Уволен",
 	})
@@ -67,6 +73,13 @@ func RevertUser(c *gin.Context, app *app.App) {
 			"error": "Ошибка сервера",
 		})
 	}
+
+	if err := app.Cache.LoadEmployees(); err != nil {
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{
+			"error": "Ошибка сервера",
+		})
+	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"message": "Пользователь успешно Вернут",
 	})

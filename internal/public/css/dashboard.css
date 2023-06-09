@@ -486,6 +486,9 @@ li a {
   flex-flow: wrap row;
   justify-content: center;
 }
+.users-wrapper .user-fried {
+  background-color: #b7b7b7 !important;
+}
 .users-wrapper .user-card {
   min-width: 300px;
   box-sizing: border-box;
@@ -513,4 +516,4 @@ li a {
   background-color: #2da3d9;
 }
 
-/*# sourceMappingURL=dashboard.99caeb1482c0cd27f4b1.css.map*/
+/*# sourceMappingURL=dashboard.58d9bf2c3e25ef466049.css.map*/

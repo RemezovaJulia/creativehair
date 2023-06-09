@@ -4,10 +4,10 @@
 li{
   list-style: none;
 }
-nav{
-  position: fixed;
+nav {
+  right: 0;
   top: 0;
-  left: 0;
+  position: fixed;
   z-index: 99999;
   width: 100%;
   background: -webkit-linear-gradient(256deg, rgb(93, 57, 111) 0%, rgb(73, 34, 59) 52%);
@@ -108,10 +108,11 @@ nav .nav-collapse a:hover {
   text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 10px #2196f3, 0 0 15px #673ab7, 0 0 10px #9c27b0, 0 0 4px #e91e63, -1px 0px 11px #e91e63, 0px 0px 0px #ce5937;
 }
 
-
 section#user {
   text-align: center;
-  margin-top: 150px;
+}
+div#user-wrapper {
+  margin-top: 100px;
 }
 .svelte-images-gallery {
   display: -webkit-box;
@@ -126,4 +127,4 @@ section#user {
   justify-content: center;
 }
 
-/*# sourceMappingURL=user.2d0c31ee7c12f37b7b60.css.map*/
+/*# sourceMappingURL=user.7953f5848a2358db35f8.css.map*/

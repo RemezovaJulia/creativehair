@@ -3,6 +3,10 @@
   flex-flow: wrap row;
   justify-content: center;
 
+  .user-fried {
+    background-color: #b7b7b7 !important;
+  }
+
   .user-card {
     min-width: 300px;
     box-sizing: border-box;
@@ -19,12 +23,14 @@
       margin-top: 10px;
       display: flex;
       justify-content: space-between;
+
       a {
         text-decoration: none;
         padding: 5px 10px;
         border: 1px solid #2da3d9;
         border-radius: 4px;
         color: #4e2840;
+
         &:hover {
           background-color: #2da3d9;
         }

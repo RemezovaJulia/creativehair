@@ -521,6 +521,7 @@ nav .nav-collapse a:hover {
 }
 #employees #employees-wrapper #employees-list .employee-cart .employee-description {
   padding: 10px 0;
+  text-align: center;
 }
 #employees #employees-wrapper #employees-list .employee-cart .employee-more-info {
   margin-top: auto;
@@ -1031,4 +1032,4 @@ footer ul {
   margin: 2px;
 }
 
-/*# sourceMappingURL=appointments.f347eebccbb4fa850a21.css.map*/
+/*# sourceMappingURL=appointments.290eebd45deda4c0560c.css.map*/
