@@ -1,0 +1,21 @@
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/group-css-media-queries-loader/lib/index.js!./node_modules/postcss-loader/dist/cjs.js!./src/public/css/user.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+section#user {
+  text-align: center;
+}
+
+.svelte-images-gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=user.7953f5848a2358db35f8.css.map*/

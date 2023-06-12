@@ -18,6 +18,7 @@ type Config struct {
 	SMTPHost string
 	SMTPUser string
 	SMTPPass string
+	GinMode  string
 }
 
 func NewConfig() (*Config, error) {
@@ -38,5 +39,6 @@ func NewConfig() (*Config, error) {
 		SMTPPort: os.Getenv("SMTP_PORT"),
 		SMTPUser: os.Getenv("SMTP_USERNAME"),
 		SMTPPass: os.Getenv("SMTP_PASSWORD"),
+		GinMode:  os.Getenv("GIN_MODE"),
 	}, nil
 }

@@ -14,6 +14,7 @@ import (
 func RegisterRoutes(app *app.App) {
 	app.Router.LoadHTMLGlob("./internal/templates/*")
 	app.Router.StaticFS("/public", http.Dir("internal/public"))
+	app.Router.StaticFile("/favicon.png", "./internal/public/favicon.png")
 	store := cookie.NewStore([]byte("secret"))
 	store.Options(sessions.Options{
 		Path:     "/",

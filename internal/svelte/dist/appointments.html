@@ -5,9 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <title>Парикмахерская</title>
-<script defer src="public/js/appointments.bundle.3b43885bc1a93d308b6e.js"></script><script defer src="public/js/gallery.bundle.490cf22c627706e9d85d.js"></script><link href="./public/css/appointments.css" rel="stylesheet"><link href="./public/css/gallery.f347eebccbb4fa850a21.css" rel="stylesheet"></head>
+    <title>Document</title>
+<script defer src="public/js/appointments.bundle.3b43885bc1a93d308b6e.js"></script><script defer src="public/js/gallery.bundle.490cf22c627706e9d85d.js"></script><link href="./public/css/appointments.290eebd45deda4c0560c.css" rel="stylesheet"><link href="./public/css/gallery.290eebd45deda4c0560c.css" rel="stylesheet"></head>
 <body>
 <nav>
     <ul id="nav-bar">
@@ -60,18 +59,49 @@
         <div id="employees-wrapper">
             <h2>Наши Мастера</h2>
             <div id="employees-list">
-                {{ range  .employees}}
                 <div class="employee-cart">
-                    <img src="{{.Photo.String}}" alt="">
+                    <img src="public/images/users/1/photo/super_user_admin3213.jpg" alt="">
                     <p class="employee-name">
-                        {{.Name}}
+                        Вася
                     </p>
                     <p class="employee-description">
-                      {{.About.String}}
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, amet dicta dolorum
+                        est hic laudantium omnis placeat sequi tempore. Ded
                     </p>
-                    <a href="user/{{.Id}}" class="employee-more-info">Подробнее</a>
+                    <a href="#" class="employee-more-info">Подробнее</a>
                 </div>
-                {{end}}
+                <div class="employee-cart">
+                    <img src="public/images/users/1/photo/super_user_admin3213.jpg" alt="">
+                    <p class="employee-name">
+                        Вася
+                    </p>
+                    <p class="employee-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, amet dicta dolorum
+                        est hic laudantium omnis placeat sequi tempore. Ded
+                    </p>
+                    <a href="#" class="employee-more-info">Подробнее</a>
+                </div>
+                <div class="employee-cart">
+                    <img src="public/images/users/1/photo/super_user_admin3213.jpg" alt="">
+                    <p class="employee-name">
+                        Вася
+                    </p>
+                    <p class="employee-description">
+                        Lorem ipsum dolor sit amet
+                    </p>
+                    <a href="#" class="employee-more-info">Подробнее</a>
+                </div>
+                <div class="employee-cart">
+                    <img src="public/images/users/1/photo/super_user_admin3213.jpg" alt="">
+                    <p class="employee-name">
+                        Вася
+                    </p>
+                    <p class="employee-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, amet dicta dolorum
+                        est hic laudantium omnis placeat sequi tempore. Ded
+                    </p>
+                    <a href="#" class="employee-more-info">Подробнее</a>
+                </div>
             </div>
         </div>
     </section>

@@ -20,6 +20,7 @@ func NewApp(cfg *config.Config) (*App, error) {
 		return nil, err
 	}
 	router := gin.Default()
+	gin.SetMode(cfg.GinMode)
 	cache := datastore.NewCache(db)
 	_, err = cache.LoadSchedule()
 
