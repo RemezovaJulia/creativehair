@@ -56,7 +56,7 @@
 
     function emailValidator(ev) {
         validator(ev.target, !ev.target.value.match(/^[a-zA-Z0-9-.]+@[a-zA-Z]+\.[a-zA-Z]+$/),
-            "не верный формат email!")
+            "неверный формат email!")
     }
 
     function newPassValidator(ev) {

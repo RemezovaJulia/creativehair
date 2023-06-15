@@ -7,7 +7,7 @@
     const errors = {
         'Имя должно содержать больше 2 символов': true,
         'телефон должен быть формата +7(XXX)-XXX-XX-XX': true,
-        "не верный формат email!": true
+        "неверный формат email!": true
     }
     let sendBtn
     let errMsg
@@ -298,7 +298,7 @@
 
     function emailValidator(ev) {
         validator(ev.target, !ev.target.value.match(/^[a-zA-Z0-9-.]+@[a-zA-Z]+\.[a-zA-Z]+$/),
-            "не верный формат email!")
+            "неверный формат email!")
     }
 
     function normalizeDate(date) {
